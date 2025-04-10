@@ -1,0 +1,18 @@
+(lang dune 3.14)
+
+(name as0)
+
+(generate_opam_files false)
+
+(authors "Seonyeong Heo")
+
+(maintainers "Seonyeong Heo")
+
+(package
+ (name as0)
+ (synopsis "Assignment 0")
+ (description "Your First Functional Programming")
+ (depends ocaml dune)
+ (tags ("compiler")))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project
