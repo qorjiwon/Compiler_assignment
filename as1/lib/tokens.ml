@@ -1,0 +1,38 @@
+(* CSE322 Compiler Assignment 1 *)
+(* Module that Defines Lexical Tokens *)
+
+(* A "scaffold" structure for debugging lexers. *)
+type ('svalue,'pos) token = string
+
+let print_token (p,s) = let save = !Errormsg.any_error in 
+  Errormsg.error(p,s); Errormsg.any_error := save; s
+ 
+let tok_arrow(p) = print_token(p,"ARROW")
+let tok_fun(p) = print_token(p,"FUN")
+let tok_in(p) = print_token(p,"IN")
+let tok_let(p) = print_token(p,"LET")
+let tok_else(p) = print_token(p,"ELSE")
+let tok_then(p) = print_token(p,"THEN")
+let tok_if(p) = print_token(p,"IF")
+let tok_assign(p) = print_token(p,"ASSIGN")
+let tok_bang(p) = print_token(p,"BANG")
+let tok_ref(p) = print_token(p,"REF")
+let tok_do(p) = print_token(p,"DO")
+let tok_while(p) = print_token(p,"WHILE")
+let tok_or(p) = print_token(p,"OR")
+let tok_not(p) = print_token(p,"NOT")
+let tok_and(p) = print_token(p,"AND")
+let tok_gt(p) = print_token(p,"GT")
+let tok_eq(p) = print_token(p,"EQ")
+let tok_lt(p) = print_token(p,"LT")
+let tok_proj(p,n) = print_token(p,"PROJ("^Int.to_string(n)^")") 
+let tok_times(p) = print_token(p,"TIMES")
+let tok_minus(p) = print_token(p,"MINUS")
+let tok_plus(p) = print_token(p,"PLUS")
+let tok_rparen(p) = print_token(p,"RPAREN")
+let tok_lparen(p) = print_token(p,"LPAREN")
+let tok_colon(p) = print_token(p,"COLON")
+let tok_semicolon(p) = print_token(p,"SEMICOLON")
+let tok_comma(p) = print_token(p,"COMMA")
+let tok_id(p,s) = print_token(p,"ID("^s^")")
+let tok_num(p,n) = print_token(p,"NUM("^Int.to_string(n)^")")
