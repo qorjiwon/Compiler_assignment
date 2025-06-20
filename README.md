@@ -14,16 +14,18 @@ This repository contains four successive assignments for the CSE322 Compiler cou
 
 ---
 
-## Assignment 0
+## 🎯Assignment 0
 
 Basic list and tree-processing functions.
+
+### 🛠Build & Execute
 
 ```bash
 cd as0
 dune build
 dune exec as0
 ```
-Output:
+### ✅Output:
 
 ```text
 Testing Task1.fac
@@ -72,7 +74,7 @@ Testing Task2.max
   Passed.
 ```
 
-### Wrap up
+### 🧹Wrap up
 
 ```bash
 dune clean
@@ -80,7 +82,9 @@ dune clean
 
 ---
 
-## Assignment 1
+## 🎯Assignment 1
+
+### 🛠Build & Execute
 
 ```bash
 cd ../as1
@@ -107,20 +111,26 @@ dune clean
 
 ## Assignment 2
 
+### 🛠Build
+
 ```bash
 cd ../as2
 dune build
 ```
-### Output
+### ⚠️ Warnings
+When running the build you may see output like:
 ```bash
 6 shift/reduce conflicts.
 ```
+These messages come from Menhir (the OCaml parser generator) indicating grammar ambiguities. <ins>**They are expected in this assignment**</ins> and do not prevent your code from compiling or running correctly. You can safely ignore them, or—if you’re curious—inspect and refine parser.mly to eliminate the conflicts.
+
+### ▶️ Execute
 
 ```bash
 dune exec as2
 ```
 
-### Output
+### ✅Output
 
 ```text
 Program:                            t
@@ -182,14 +192,16 @@ Program Output:
 124
 ```
 
-### Wrap up
+### 🧹Wrap up
 
 ```bash
 dune clean
 ```
 ---
 
-## Assignment 3
+## 🎯Assignment 3
+
+### 🛠Build & Execute
 
 ```bash
 cd as3
@@ -197,7 +209,7 @@ dune build
 dune exec as3
 ```
 
-### Output
+### ✅Output
 ```text
 Compiling data/all.fun ...
 Program is successfully type-checked
@@ -205,7 +217,7 @@ Compiling data/test.fun ...
 Program is successfully type-checked
 ```
 
-### Wrap up
+### 🧹Wrap up
 ```bash
 dune clean
 ```
