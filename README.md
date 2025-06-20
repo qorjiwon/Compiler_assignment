@@ -1,5 +1,5 @@
 
-# Compiler Assignments Overview
+# 📚Compiler Assignments Overview
 
 This repository contains four successive assignments for the CSE322 Compiler course. Each assignment directory (`as0`, `as1`, `as2`, `as3`) can be built and run with `dune`.
 
